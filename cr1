@@ -9,7 +9,7 @@ Do While Cells(i, 1) <> ""
         t = Cells(i, 2)
  
     sFileName = s    ' шлях до файлу
-    sNewFileName = "D:\FIN_MON\Ukraine\copy_here_all\" & t    'імя що буде присвоєно, директорія має існувати
+    sNewFileName = "D:\MON\Ukraine\copy_here_all\" & t    'імя що буде присвоєно, директорія має існувати
     
     If Dir(sFileName, 16) = "" Then MsgBox "нема такого файлу", vbCritical, "помилка": Exit Sub
     
