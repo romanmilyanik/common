@@ -1,1 +1,28 @@
-tyyyy
+Sub Copy_File()
+    Dim sFileName As String, sNewFileName As String
+    Dim s As String
+    
+    i = 1
+    
+Do While Cells(i, 1) <> ""
+        s = Cells(i, 1)
+        t = Cells(i, 2)
+ 
+    sFileName = s    ' шлях до файлу
+    sNewFileName = "D:\FIN_MON\Ukraine\copy_here_all\" & t    'імя що буде присвоєно, директорія має існувати
+    
+    If Dir(sFileName, 16) = "" Then MsgBox "нема такого файлу", vbCritical, "помилка": Exit Sub
+    
+    FileCopy sFileName, sNewFileName 'копіюється
+    
+    i = i + 1
+Loop
+    
+    
+    MsgBox "Файли скопійовані", vbInformation
+End Sub
+
+
+
+
+
